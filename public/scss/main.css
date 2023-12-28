@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,700&family=Space+Grotesk:wght@400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+}
+
+body {
+  background: hsl(27, 66%, 92%);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  font-family: "DM Sans", sans-serif;
+  color: hsl(25, 47%, 15%);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+main .text {
+  color: hsl(28, 10%, 53%);
+}
+main .text2 {
+  font-size: 2rem;
+}
+main .balance {
+  padding: 1.5rem 2rem;
+  width: 40vw;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: hsl(10, 79%, 65%);
+  color: hsl(33, 100%, 98%);
+}
+main .balance_text #cash-balance {
+  margin-top: 0.5rem;
+}
+main .data {
+  padding: 1.5rem 2rem;
+  width: 40vw;
+  border-radius: 1rem;
+  background: hsl(33, 100%, 98%);
+  margin-top: 1.5rem;
+}
+main .data_charts {
+  margin: 3rem 0;
+}
+main .data_charts_list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+main .data_charts_list .weekday {
+  list-style-type: none;
+}
+main .data_charts_list .weekday div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 5vw;
+}
+main .data_charts_list .weekday div .day-cash {
+  visibility: hidden;
+  height: 2.5rem;
+  width: 5rem;
+  border-radius: 0.5rem;
+  background: hsl(25, 47%, 15%);
+  margin-bottom: 0.7rem;
+}
+main .data_charts_list .weekday div .day-cash p {
+  color: hsl(33, 100%, 98%);
+}
+main .data_charts_list .weekday div .day-bar {
+  height: 10rem;
+  width: 3rem;
+  background: hsl(10, 79%, 65%);
+  border-radius: 0.5rem;
+}
+main .data_charts_list .weekday div .day-bar:hover + .day-cash {
+  visibility: visible;
+}
+main .data_charts_list .weekday div .day-text {
+  margin-top: 1rem;
+  text-align: center;
+  color: hsl(28, 10%, 53%);
+}
+main .data_footer {
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  border-top: 2px solid lightgray;
+}
+main .data_footer_month-cash {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .data_footer_month-cash div {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+main .data_footer_month-cash #month-overall {
+  font-size: 2.8rem;
+}/*# sourceMappingURL=main.css.map */

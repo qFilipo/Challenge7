@@ -1,0 +1,122 @@
+@import "config";
+
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+}
+
+body{
+    background: $cream;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    font-family: 'DM Sans', sans-serif;
+    color: $darkBrown;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .text{
+        color: $mediumBrown;
+    }
+
+    .text2{
+        font-size: 2rem;
+    }
+
+    .balance{
+        @include section-style;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: $softRed;
+        color: $paleOrange;
+
+        &_text{
+
+            #cash-balance{
+                margin-top: 0.5rem;
+            }
+        }
+    }
+
+    .data{
+        @include section-style;
+        background: $paleOrange;
+        margin-top: 1.5rem;
+
+        &_charts{
+            margin: 3rem 0;
+            &_list{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                height: 100%;
+
+                .weekday{
+                    list-style-type: none;
+                    div{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        width: 5vw;
+                        .day-cash{
+                            visibility: hidden;
+                            height: 2.5rem;
+                            width: 5rem;
+                            border-radius: 0.5rem;
+                            background: $darkBrown;
+                            margin-bottom: 0.7rem;
+                            p{
+                                color: $paleOrange;
+                            }
+                        }
+                        .day-bar{
+                            height: 10rem;
+                            width: 3rem;
+                            background: $softRed;
+                            border-radius: 0.5rem;
+                            &:hover + .day-cash{
+                                visibility: visible;
+                            }
+                        }
+                        .day-text{
+                            margin-top: 1rem;
+                            text-align: center;
+                            color: $mediumBrown;
+                        }
+                    }
+                }
+            }
+        }
+
+        &_footer{
+            padding-top: 2rem;
+            display: flex;
+            flex-direction: column;
+            border-top: 2px solid lightgray;
+
+            &_month-cash{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                div{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: end;
+                }
+
+                #month-overall{
+                    font-size: 2.8rem;
+                }
+            }
+        }
+    }
+}
