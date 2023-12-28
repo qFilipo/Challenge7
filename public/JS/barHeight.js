@@ -10,7 +10,7 @@ function barHeight(){
             return response.json();
         })
         .then(data => {
-            cashObject = await data;
+            cashObject = data;
         })
         .catch(error => {
             console.error('Fetching error:', error);
