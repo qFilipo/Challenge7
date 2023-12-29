@@ -42,6 +42,26 @@ function cashBox(cashObject){
               element.style.background = ""        
           }
       })
+
+      element.addEventListener("touchstart", function(){
+        charCash[index].style.visibility = "visible"
+        if (index === day){
+            element.style.background = "hsl(186, 34%, 60%, 40%)"
+        }
+        else{
+            element.style.background = "hsl(10, 79%, 65%, 80%)"
+        }
+    })
+    element.addEventListener("touchend", function(){
+        charCash[index].style.visibility = "hidden"
+        if (index === day){
+            element.style.background = "hsl(186, 34%, 60%)"
+        }
+        else{
+            element.style.background = ""        
+        }
+    })
+
   })
 
   let dayAmount = cashObject.map(element => element.amount)
