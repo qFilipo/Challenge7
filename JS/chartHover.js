@@ -1,5 +1,4 @@
 function cashBox(cashObject){
-
     const charBar = document.querySelectorAll(".day-bar")
     const charCash = document.querySelectorAll(".day-cash")
     const textBox = document.querySelectorAll(".day-cash_text")

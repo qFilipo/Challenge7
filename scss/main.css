@@ -53,7 +53,7 @@ main .data_charts {
   margin: 1rem 0 3rem 0;
 }
 main .data_charts_list {
-  visibility: hidden;
+  visibility: visible;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;

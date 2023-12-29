@@ -56,7 +56,7 @@ main{
         &_charts{
             margin: 1rem 0 3rem 0;
             &_list{
-                visibility: hidden;
+                visibility: visible;
                 display: flex;
                 justify-content: space-between;
                 align-items: flex-end;
