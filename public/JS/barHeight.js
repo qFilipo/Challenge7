@@ -1,22 +1,16 @@
-function barHeight(){
+async function barHeight(cashObject){
 
-    let cashObject = []
+    const dayBar=document.querySelectorAll(".day-bar")
+    const listVisi=document.querySelector(".data_charts_list")
 
-    fetch ('JSON/data.json')
-        .then(response => {
-            if (!response.ok) {
-            throw new Error('Network response was not ok');
-            }
-            return response.json();
-        })
-        .then(data => {
-            cashObject = data;
-        })
-        .catch(error => {
-            console.error('Fetching error:', error);
-        });
+    let dayAmount = cashObject.map(element => element.amount)
 
-    console.log(cashObject[1])
+    for (let i=0; i<dayBar.length; i++){
+        let variableHeight = (dayAmount[i]/Math.max(...dayAmount))
+        dayBar[i].style.height = 10*variableHeight +"rem"
+    }
+
+    listVisi.style.visibility = "visible"
 }
 
 export default barHeight;

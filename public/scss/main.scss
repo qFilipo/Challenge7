@@ -10,7 +10,8 @@ body{
     background: $cream;
     height: 100vh;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     font-family: 'DM Sans', sans-serif;
     color: $darkBrown;
 }
@@ -20,6 +21,8 @@ main{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    height: 100%;
+    width: 100%;
 
     .text{
         color: $mediumBrown;
@@ -51,35 +54,38 @@ main{
         margin-top: 1.5rem;
 
         &_charts{
-            margin: 3rem 0;
+            margin: 1rem 0 3rem 0;
             &_list{
+                visibility: hidden;
                 display: flex;
                 justify-content: space-between;
-                align-items: center;
+                align-items: flex-end;
                 height: 100%;
+                width: 100%;
 
                 .weekday{
                     list-style-type: none;
+                    width: 15%;
+
                     div{
                         display: flex;
                         flex-direction: column;
-                        justify-content: center;
                         align-items: center;
-                        width: 5vw;
                         .day-cash{
                             visibility: hidden;
                             height: 2.5rem;
-                            width: 5rem;
+                            width: 110%;
                             border-radius: 0.5rem;
                             background: $darkBrown;
                             margin-bottom: 0.7rem;
                             p{
                                 color: $paleOrange;
+                                margin:auto;
                             }
                         }
                         .day-bar{
                             height: 10rem;
-                            width: 3rem;
+                            width: 75%;
                             background: $softRed;
                             border-radius: 0.5rem;
                             &:hover + .day-cash{

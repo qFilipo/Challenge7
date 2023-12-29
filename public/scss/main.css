@@ -9,7 +9,8 @@ body {
   background: hsl(27, 66%, 92%);
   height: 100vh;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   font-family: "DM Sans", sans-serif;
   color: hsl(25, 47%, 15%);
 }
@@ -19,6 +20,8 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: 100%;
+  width: 100%;
 }
 main .text {
   color: hsl(28, 10%, 53%);
@@ -28,7 +31,7 @@ main .text2 {
 }
 main .balance {
   padding: 1.5rem 2rem;
-  width: 40vw;
+  width: 30rem;
   border-radius: 1rem;
   display: flex;
   justify-content: space-between;
@@ -41,44 +44,46 @@ main .balance_text #cash-balance {
 }
 main .data {
   padding: 1.5rem 2rem;
-  width: 40vw;
+  width: 30rem;
   border-radius: 1rem;
   background: hsl(33, 100%, 98%);
   margin-top: 1.5rem;
 }
 main .data_charts {
-  margin: 3rem 0;
+  margin: 1rem 0 3rem 0;
 }
 main .data_charts_list {
+  visibility: hidden;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   height: 100%;
+  width: 100%;
 }
 main .data_charts_list .weekday {
   list-style-type: none;
+  width: 15%;
 }
 main .data_charts_list .weekday div {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  width: 5vw;
 }
 main .data_charts_list .weekday div .day-cash {
   visibility: hidden;
   height: 2.5rem;
-  width: 5rem;
+  width: 110%;
   border-radius: 0.5rem;
   background: hsl(25, 47%, 15%);
   margin-bottom: 0.7rem;
 }
 main .data_charts_list .weekday div .day-cash p {
   color: hsl(33, 100%, 98%);
+  margin: auto;
 }
 main .data_charts_list .weekday div .day-bar {
   height: 10rem;
-  width: 3rem;
+  width: 75%;
   background: hsl(10, 79%, 65%);
   border-radius: 0.5rem;
 }
