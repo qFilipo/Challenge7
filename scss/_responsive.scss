@@ -1,0 +1,17 @@
+@include size-mobile{
+    main{
+        .data{
+            &_charts{
+                &_list{
+                    .weekday{
+                        div{
+                            .day-bar{
+                                height: 12rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

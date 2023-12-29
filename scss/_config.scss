@@ -9,7 +9,14 @@ $paleOrange: hsl(33, 100%, 98%);
 
 
 @mixin section-style {
+    margin: 1rem 1rem;
     padding: 1.5rem 2rem;
     width: 30rem;
     border-radius: 1rem;
+}
+
+@mixin size-mobile{
+    @media screen and (max-width: 425px){
+        @content;
+    }
 }

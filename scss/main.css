@@ -7,10 +7,11 @@
 
 body {
   background: hsl(27, 66%, 92%);
-  height: 100vh;
+  min-height: 100vh;
+  min-width: 100vw;
   display: flex;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
   font-family: "DM Sans", sans-serif;
   color: hsl(25, 47%, 15%);
 }
@@ -20,8 +21,7 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100%;
-  width: 100%;
+  margin: auto;
 }
 main .text {
   color: hsl(28, 10%, 53%);
@@ -30,6 +30,7 @@ main .text2 {
   font-size: 2rem;
 }
 main .balance {
+  margin: 1rem 1rem;
   padding: 1.5rem 2rem;
   width: 30rem;
   border-radius: 1rem;
@@ -43,6 +44,7 @@ main .balance_text #cash-balance {
   margin-top: 0.5rem;
 }
 main .data {
+  margin: 1rem 1rem;
   padding: 1.5rem 2rem;
   width: 30rem;
   border-radius: 1rem;
@@ -113,4 +115,10 @@ main .data_footer_month-cash div {
 }
 main .data_footer_month-cash #month-overall {
   font-size: 2.8rem;
+}
+
+@media screen and (max-width: 425px) {
+  main .data_charts_list .weekday div .day-bar {
+    height: 12rem;
+  }
 }/*# sourceMappingURL=main.css.map */

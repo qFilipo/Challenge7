@@ -56,8 +56,8 @@ function barHeight(cashObject){
   let dayAmount = cashObject.map(element => element.amount)
 
   for (let i=0; i<dayBar.length; i++){
-      let variableHeight = (dayAmount[i]/Math.max(...dayAmount))
-      dayBar[i].style.height = 10*variableHeight +"rem"
+      let variableHeight = (dayAmount[i]/Math.max(...dayAmount))/18
+      dayBar[i].style.height = dayBar[i].offsetHeight*variableHeight + "rem"
   }
 
   listVisi.style.visibility = "visible"
