@@ -88,6 +88,9 @@ main .data_charts_list .weekday div .day-bar {
   width: 75%;
   background: hsl(10, 79%, 65%);
   border-radius: 0.5rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 main .data_charts_list .weekday div .day-bar:hover + .day-cash {
   visibility: visible;
