@@ -10,8 +10,9 @@ let cashObject = [
 
 document.addEventListener("DOMContentLoaded",function(){
   barHeight(cashObject);
-  cashBox(cashObject);
 })
+
+cashBox(cashObject);
 
 function cashBox(cashObject){
   const charBar = document.querySelectorAll(".day-bar")
